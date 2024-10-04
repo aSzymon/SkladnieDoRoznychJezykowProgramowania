@@ -1,0 +1,13 @@
+<!-- aSzymon - gtihub -->
+
+<h3>działanie : {{name}}</h3>
+
+<br>
+
+<button (click) = "zamianaObrazu()" >Zmiana obrazu</button>
+
+<br>
+
+<img *ngIf = "pokazanyObraz" src="../assets/dom.png" alt="dom">
+
+<img *ngIf = "!pokazanyObraz" src="../assets/kot.png" alt="kot">

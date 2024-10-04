@@ -1,0 +1,3 @@
+AJAX (od ang. Asynchronous JavaScript and XML) to technologia pozwalająca na odświeżanie jedynie części strony, a nie jej całości, co odbywa się asynchronicznie. Dane są wówczas zaciągane z pliku XML lub txt zlokalizowanego na serwerze przy pomocy JavaScript albo innego skryptu.
+
+https://harbingers.io/definicje/ajax

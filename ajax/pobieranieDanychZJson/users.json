@@ -1,0 +1,33 @@
+[
+    {
+        "id" : 1,
+        "imie" : "Tomasz",
+        "nazwisko" : "Problem",
+        "wiek" : 27,
+        "telefon" : 123456789 
+    },
+
+    {
+        "id" : 2,
+        "imie" : "Malina",
+        "nazwisko" : "Krzak",
+        "wiek" : 23,
+        "telefon" : 987654123 
+    },
+
+    {
+        "id" : 3,
+        "imie" : "Julian",
+        "nazwisko" : "Krol",
+        "wiek" : 19,
+        "telefon" : 135792468 
+    },
+
+    {
+        "id" : 4,
+        "imie" : "Leon",
+        "nazwisko" : "Lew",
+        "wiek" : 14,
+        "telefon" : 753159842 
+    }
+]

@@ -1,0 +1,73 @@
+<!-- aSzymon - gtihub -->
+<!-- KOD PISANY W VISUAL STUDIO CODE / ODPALAĆ NA SERVERZE (ROZSZERZENIE W VSC TO "live server") -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ajax</title>
+        <meta charset="utf-8">
+        <!-- znacznik też służy do tego aby usunąć błąd związany z "GET http://127.0.0.1:5500/favicon.ico" -->
+        <link rel="shortcut icon" href="#">
+    </head>
+    <body>
+
+        <button id="przycisk" onclick="zaladujTekst()">nacisnij mnie</button>
+
+        <div id="napis"></div>
+
+    </body>
+
+    <script>
+
+    // document.getElementById('przycisk').addEventListener('click',loadText);
+
+    //aby działał przycisk z listenerem nie może być lambdy ponieważ z LAMBDĄ nie chce działać bo nie widzi funkcji :C
+    //pod spodem jest jak powinno to wyglądać z wykorzystaniem funcji
+
+    // function loadText() {
+    zaladujTekst = () => {
+
+        let xml = new XMLHttpRequest();
+
+        //jeśli zamiast 'tekst.txt' damy 'tekst65k.txt' wykona się funkcja "onprogress", jest ona napisana pod fun onload
+        xml.open('GET','tekst.txt',true);
+
+        xml.send();
+
+        xml.onload = function(){
+
+            if(this.status == 200){
+
+            console.log(this.responseText);
+
+            document.getElementById('napis').innerHTML = this.responseText;
+
+            } else if(this.status == 404) {
+
+                document.getElementById("tekst").innerHTML = "nie można załadować strony ;C | Błąd 404";
+
+            } else if(this.status == 403) {
+
+                document.getElementById("tekst").innerHTML = "Brak dostępu do zawartości";
+
+            }
+        }
+
+        xml.onerror = function(){
+
+            document.getElementById('napis').innerHTML = "Wystąpił błąd :/";
+
+        }
+
+        xml.onprogress = function(){
+
+            document.getElementById('napis').innerHTML = "Ładowanie danych...";
+
+        }
+
+
+    }
+
+    </script>
+
+</html>

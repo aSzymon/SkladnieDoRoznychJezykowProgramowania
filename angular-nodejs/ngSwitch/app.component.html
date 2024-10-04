@@ -1,0 +1,24 @@
+<h3>Działanie : {{name}}</h3>
+
+<table>
+  <th>index</th>
+  <th>nazwa</th>
+  <th>cena</th>
+  <th>rodzaj produktu</th>
+  <tr *ngFor = 'let jedzenieDane of jedzenie
+                let i = index'
+      [ngSwitch] = "jedzenieDane.warotsc">
+    
+    <td>{{i+1}}</td>
+    <td>{{jedzenieDane.nazwa}}</td>
+    <td>{{jedzenieDane.cena}}</td>
+
+    <td>
+      <p *ngSwitchCase = "'1'">warzywo</p>
+      <p *ngSwitchCase = "'2'">owoc</p>
+      <p *ngSwitchCase = "'3'">słodycz</p>
+      <p *ngSwitchDefault>nie określono</p>
+    </td>
+    
+  </tr>
+</table>

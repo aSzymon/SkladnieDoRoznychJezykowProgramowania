@@ -1,0 +1,14 @@
+{
+
+    "name" : "Szymon",
+    "age" : 18,
+    "isProgramer" : true,
+    "languages" : ["php","JavaScript","java"],
+    "friends" : [{
+        "name" : "Marta",
+        "age" : 18,
+        "isProgramer" : false,
+        "friends" : [""]
+    }]
+
+}

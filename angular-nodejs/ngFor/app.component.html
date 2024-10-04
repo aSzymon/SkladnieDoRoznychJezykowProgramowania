@@ -1,0 +1,25 @@
+<!-- aSzymon - gtihub -->
+
+<h3>działanie : {{name}}</h3>
+
+<table>
+  <th>index</th>
+  <th>Zwierzeta</th>
+  <th>pierwszy element</th>
+  <th>ostatni element</th>
+  <tr *ngFor = 'let zwierzak of listaZwierzat
+                let i = index
+                let l = last
+                let f = first'>
+    <td>{{i+1}}</td>
+    <td>{{zwierzak}}</td>
+    <td>{{f}}</td>
+    <td>{{l}}</td>
+    
+  </tr>
+</table>
+
+<ul *ngFor = 'let imie of imiona
+let i = index'>
+  <li>{{i+1}} . {{imie}}</li>
+</ul>
